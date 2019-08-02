@@ -10,7 +10,7 @@ class Converter extends Component {
         convertTo: 'EUR',
         amount: 1,
         result: '',
-        date: '',
+        date: ''
     }
 
     componentDidMount() {
@@ -49,11 +49,12 @@ class Converter extends Component {
 
 
     calculate = () => {
+        console.log('reached here')
         const amount = this.state.amount;
         if (amount === isNaN) {
             return;
         } else {
-            fetch(`https://data.fixer.io/api/latest?access_key=eff15d471c7ba065a8cb7ebc4672cb30&base=${this.state.base}`)
+            fetch(`http://data.fixer.io/api/latest?access_key=eff15d471c7ba065a8cb7ebc4672cb30&base=${this.state.base}`)
                 .then(res => res.json())
                 .then(data => {
                     const date = data.date;
@@ -107,7 +108,8 @@ class Converter extends Component {
                             } />
                         <select name="convertTo"
                             value={convertTo}
-                            onChange={this.handleSelect}> {currencies.map(currency => (
+                            onChange={this.handleSelect}> 
+                            {currencies.map(currency => (
                                 <option className='select-options' key={currency} value={currency}>{currency}</option>
                             ))} </select>
                     </form>
