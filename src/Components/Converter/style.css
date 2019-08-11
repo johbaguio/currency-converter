@@ -5,8 +5,8 @@
     padding:20px;
     display: block;
     margin: 8% 20%;
-    border: 3px outset black;
-    background: rgba(216, 192, 156, 0.5);
+    border: 4px outset white;
+    background: rgb(243, 218, 181);
 }
 
 .result{

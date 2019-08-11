@@ -54,7 +54,7 @@ class Converter extends Component {
         if (amount === isNaN) {
             return;
         } else {
-            fetch(`http://data.fixer.io/api/latest?access_key=eff15d471c7ba065a8cb7ebc4672cb30&base=${this.state.base}`)
+            fetch(`https://api.exchangeratesapi.io/latest?base=${this.state.base}`)
                 .then(res => res.json())
                 .then(data => {
                     const date = data.date;
