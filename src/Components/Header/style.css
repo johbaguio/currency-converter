@@ -1,6 +1,17 @@
 .header{
     text-align: center;
-    margin:4.5% 2%;
+    margin:25% 2% 10% 2%;
     font-family: monospace;
-    font-size: 4.1vw;
+    font-size: 2rem;
+    color:white;
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* HEADER */
+.header{
+    margin:10% auto 2% auto;
+    font-size: 45px;
+}
+
 }

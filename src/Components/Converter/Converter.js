@@ -7,7 +7,7 @@ class Converter extends Component {
     state = {
         currencies: [],
         base: 'DKK',
-        convertTo: 'EUR',
+        convertTo: 'CAD',
         amount: 1,
         result: '',
         date: ''
@@ -69,7 +69,6 @@ class Converter extends Component {
 
 
     render() {
-        // const { currencies, base, convertTo, amount, result, date } = this.state;
         const { currencies, amount, result, convertTo, base, date } = this.state;
         return (
             <div className='container'>
@@ -108,9 +107,11 @@ class Converter extends Component {
                             } />
                         <select name="convertTo"
                             value={convertTo}
-                            onChange={this.handleSelect}> 
+                            onChange={this.handleSelect}>
                             {currencies.map(currency => (
-                                <option className='select-options' key={currency} value={currency}>{currency}</option>
+                                <option className='select-options' key={currency} value={currency}>{currency}
+
+                                </option>
                             ))} </select>
                     </form>
                 </div>

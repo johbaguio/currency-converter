@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|Tajawal&display=swap');
 
 .container{
+    width:60%;
     text-align: center;
     padding:20px;
     display: block;
-    margin: 8% 20%;
-    border: 4px outset white;
-    background: rgb(156, 222, 248);
+    margin: 8% auto;
+    /* border: 4px outset white; */
+    background: rgb(199, 229, 245);
+    border-radius: 4px;
 }
 
 .result{
@@ -19,22 +21,26 @@
 }
 
 .input-field{
-    padding:10px;
+    font-size:12px;
+    padding:5px;
 }
 select{
-    width:80px;
     height:38px;
+    margin-left:10px;
+    background:rgb(20, 20, 20);
+    color:white;
+    text-align: center; 
 }
 
 .date{
     font-style: italic;
-    color: rgb(241, 8, 8);
+    color: rgb(150, 141, 141);
     font-weight: bold;
 }
 
 .base, .convert-to{
     font-style: italic;
-    color: rgb(8, 28, 207);
+    color: black;
     font-weight: bold;
 }
 
