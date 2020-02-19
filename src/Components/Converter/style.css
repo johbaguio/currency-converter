@@ -22,7 +22,7 @@
 
 .input-field{
     font-size:12px;
-    padding:5px;
+    padding:8px 0;
 }
 select{
     height:38px;
@@ -43,4 +43,5 @@ select{
     color: black;
     font-weight: bold;
 }
+
 
