@@ -24,6 +24,19 @@ class Converter extends Component {
                 console.log(err);
                 this.setState({ requestStatus: "error" });
             });
+
+        const amount = this.state.amount;
+        fetch(`https://api.exchangeratesapi.io/latest?base=${this.state.base}`)
+            .then(res => res.json())
+            .then(data => {
+                const date = data.date;
+                const result = (data.rates[this.state.convertTo] * amount).toFixed(2);
+                this.setState({
+                    result,
+                    date
+                });
+            });
+
     }
 
     handleSelect = e => {
@@ -73,7 +86,7 @@ class Converter extends Component {
         return (
             <div className='container'>
                 <div className="result">
-                    <h3> <b className='base'> {amount} {base}</b> is equivalent to </h3>
+                    <h3> <b className='base'> {amount} {base}  </b> is equivalent to </h3>
                     <h2>
                         <b className='convert-to'>{result} {convertTo}</b>
                     </h2>

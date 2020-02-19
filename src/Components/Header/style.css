@@ -1,9 +1,10 @@
 .header{
     text-align: center;
     margin:25% 2% 10% 2%;
-    font-family: monospace;
     font-size: 2rem;
+    font-family:Calibri, 'Trebuchet MS', sans-serif;
     color:white;
+    letter-spacing: 1px;
 }
 
 
